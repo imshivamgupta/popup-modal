@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|DM+Serif+Display|Muli:400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="popup.css" />
+    <link rel="stylesheet" href="calling.css" />
+    <title>PopUp</title>
+  </head>
+  <body>
+    <button class="trigger">Click here to trigger the modal!</button>
+    <!-- <div class="modal">
+      <div class="modal-content">
+        <main>
+          <form autocomplete="on">
+            <h2 class="main-heading">
+              <span> Wave City</span><br />
+              Welcomes You
+            </h2>
+            <p>
+              Our virtual tour guide would like to <br />
+              know you better.
+            </p>
+            <input
+              type="text"
+              name="name"
+              aria-placeholder="Your name"
+              placeholder="Your Name (Optional)"
+            />
+            <div class="btn-group">
+              <a class="btn btn-primary">Continue</a>
+            </div>
+          </form>
+        </main>
+      </div>
+    </div> -->
+    <!-- multitab popup -->
+    <!-- <div class="modal">
+      <div class="modal-content multi-tabs">
+        <main>
+          <p>
+            Kubma Tour is open in another window. Click “Use Here” to use Kubma
+            Tour in this window.
+          </p>
+          <div class="btn-group">
+            <a class="btn btn-secondary">Close</a>
+            <a class="btn btn-primary">Use Here</a>
+          </div>
+        </main>
+      </div>
+    </div> -->
+    <!-- Calling Popup -->
+    <div class="modal calling">
+      <!-- add this class multi-tabs-->
+      <div class="modal-content">
+        <main>
+          <h2 class="main-heading">
+            Incoming Call
+          </h2>
+          <p>
+            Gold’s gym is keen to interact with you & help you explore their
+            place.
+          </p>
+          <div class="btn-group">
+            <a class="btn btn-cancel">
+              <img src="cancel.svg" alt="cancel calling" width="30" />
+              <p>Reject Call</p>
+            </a>
+            <a class="btn btn-receive">
+              <img src="receive.svg" alt="receive calling" width="30" />
+              <p>Accept Call</p>
+            </a>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
