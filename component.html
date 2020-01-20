@@ -12,7 +12,7 @@
   </head>
   <body>
     <div id="app">
-      <notification step="3" brand="Wave City"></notification>
+      <notification step="1" brand="Wave City"></notification>
     </div>
     <script type="text/x-template" id="notification">
       <div class="modal show-modal">
@@ -32,13 +32,14 @@
                 name="name"
                 aria-placeholder="Your name"
                 placeholder="Your Name (Optional)"
+                class="input-single"
               />
               <div class="btn-group">
                 <a class="btn btn-primary">Continue</a>
               </div>
             </form>
             <!-- Form Step 2 -->
-            <form autocomplete="on" v-if="step ==2">
+            <form autocomplete="on" v-if="step == 2">
               <h2 class="main-heading">
                 We will call you back :)
               </h2>

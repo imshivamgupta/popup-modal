@@ -91,6 +91,9 @@ input {
   width: 80%;
   padding: 1.4rem;
 }
+input.input-single {
+  margin: 0.6rem auto;
+}
 
 ::placeholder {
   text-align: center;
