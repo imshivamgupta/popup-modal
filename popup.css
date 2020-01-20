@@ -163,7 +163,15 @@ p {
 }
 
 .btn-secondary {
-  color: #4c01e0;
+  color: #1289e0;
+}
+.btn-try {
+  color: #0dbd53;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+  letter-spacing: normal;
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 .btn-secondary:hover {
@@ -223,13 +231,13 @@ p {
 }
 
 .multi-tabs p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: left;
   margin: 0;
 }
 
 .multi-tabs main {
-  min-height: 180px;
+  min-height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -286,16 +294,34 @@ p {
   perspective: 1000px;
 } */
 
-.modal.show-modal .btn p {
-  font-size: 0.8rem;
-  font-weight: 800;
+.modal.calling .btn p {
+  font-size: 0.9rem;
+  font-weight: 500;
   margin-top: 0.2rem;
+  letter-spacing: normal;
+  font-family: "Roboto", sans-serif;
 }
 
-.modal.show-modal .main-heading {
-  /* color: #1289e0; */
+.modal.calling .main-heading {
+  color: #1289e0;
 }
 
+.modal.permission p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.modal.permission p {
+  margin: 1.4rem auto;
+}
+.modal.permission p img {
+  margin-right: 1rem;
+}
+.modal.calling p {
+  font-size: 1rem;
+}
 .heading {
   display: flex;
   align-items: center;
@@ -402,15 +428,15 @@ main span.para {
     text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
   }
   40% {
-    color: #eb5757;
+    color: #1289e0;
     text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
   }
   60% {
-    text-shadow: 0.25em 0 0 #eb5757, 0.5em 0 0 rgba(0, 0, 0, 0);
+    text-shadow: 0.25em 0 0 #1289e0, 0.5em 0 0 rgba(0, 0, 0, 0);
   }
   80%,
   100% {
-    text-shadow: 0.25em 0 0 #eb5757, 0.5em 0 0 #eb5757;
+    text-shadow: 0.25em 0 0 #1289e0, 0.5em 0 0 #1289e0;
   }
 }
 
@@ -428,6 +454,9 @@ main span.para {
   input {
     margin: auto 0;
     width: 100%;
+  }
+  .multi-tabs main {
+    min-height: 180px;
   }
 }
 

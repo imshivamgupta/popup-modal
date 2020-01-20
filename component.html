@@ -12,7 +12,21 @@
   </head>
   <body>
     <div id="app">
-      <notification step="1" brand="Wave City"></notification>
+      <!-- <notification step="1" brand="Wave City"></notification> -->
+      <!-- <multi-tab></multi-tab> -->
+      <!-- <calling-card
+        clientname="Gold Gym"
+        heading="Calling"
+        connecting
+        loader
+        connecting-error="Please allow for the mic’s  permission when prompted by the browser."
+      ></calling-card> -->
+      <permission-card
+        heading="Unable to Connect"
+        desc="Other user has not given permission to mic’s access"
+        type="Very slow internet"
+        icon
+      ></permission-card>
     </div>
     <script type="text/x-template" id="notification">
       <div class="modal show-modal">
@@ -69,6 +83,82 @@
               </h2>
             </div>
             <span class="para">We will get back to you at the earliest</span>
+          </main>
+        </div>
+      </div>
+    </script>
+    <!-- multitab popup -->
+    <script type="text/x-template" id="multi-tab">
+      <div class="modal show-modal">
+        <div class="modal-content multi-tabs">
+          <main>
+            <p>
+              Kubma Tour is open in another window. Click “Use Here” to use Kubma
+              Tour in this window.
+            </p>
+            <div class="btn-group">
+              <a class="btn btn-secondary">Close</a>
+              <a class="btn btn-primary">Use Here</a>
+            </div>
+          </main>
+        </div>
+      </div>
+    </script>
+    <!-- Calling Card -->
+    <script type="text/x-template" id="calling-card">
+      <div class="modal calling show-modal">
+        <div class="modal-content">
+          <main class="">
+            <h2 class="main-heading loading">
+              {{heading}}
+            </h2>
+            <p v-if="incoming">
+              {{clientname.split(' ')[0]}}’s {{clientname.split(' ')[1]}} is keen to interact with you & help you explore their
+              place.
+            </p>
+            <div class="btn-group" v-if="incoming">
+              <a class="btn btn-cancel">
+                <img src="assets/cancel.svg" alt="cancel calling" width="30" />
+                <p>Reject Call</p>
+              </a>
+              <a class="btn btn-receive">
+                <img src="assets/receive.svg" alt="receive calling" width="30" />
+                <p>Accept Call</p>
+              </a>
+            </div>
+            <p v-if="loader">
+              <img src="assets/loader.svg" alt="loader" class="loader" />
+            </p>
+            <p v-if="connecting">
+              {{connectingError}}
+            </p>
+            <div class="btn-group connecting" v-if="calling">
+              <a class="btn btn-cancel">
+                <img src="assets/cancel.svg" alt="cancel calling" width="30" />
+                <p>Disconnect Call</p>
+              </a>
+            </div>
+          </main>
+        </div>
+      </div>
+    </script>
+    <!-- Error/Permission Card -->
+    <script type="text/x-template" id="permission-card">
+      <div class="modal permission show-modal">
+        <div class="modal-content">
+          <main class="">
+            <h2 class="main-heading">
+              {{heading}}
+            </h2>
+            <p>
+              <img src="assets/error.svg" alt="error" width="30">
+              <span>Very slow internet</span>
+            </p>
+            <div class="btn-group">
+              <a class="btn btn-try">
+                Try Again
+              </a>
+            </div>
           </main>
         </div>
       </div>
