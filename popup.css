@@ -1,6 +1,6 @@
 :root {
   --padding: 1.5rem 1.5rem;
-  --font-family: "Muli", sans-serif;
+  --font-family: "Roboto", sans-serif;
 }
 
 *,
@@ -84,17 +84,17 @@ form {
 input {
   display: block;
   height: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid #828282;
   padding: 1rem;
   border-radius: 0.2rem;
-  margin: auto;
+  margin: 1.4rem auto 0 auto;
   width: 80%;
-  padding: 1.2rem;
+  padding: 1.4rem;
 }
 
 ::placeholder {
   text-align: center;
-  color: #b6b3b3;
+  color: #828282;
 }
 
 .main-heading {
@@ -107,13 +107,17 @@ input {
   color: #eb5757;
   margin-bottom: auto;
 }
+.final-submit {
+  font-size: 2rem;
+  font-weight: 500;
+}
 
 p {
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 400;
   text-align: center;
-  color: rgba(0, 0, 0, 0.6);
-  margin: 0.6rem auto;
+  color: #828282;
+  margin: 1.2rem auto;
 }
 
 .human {
@@ -127,7 +131,7 @@ p {
 .btn-group {
   display: flex;
   justify-content: space-around;
-  margin-top: 1rem;
+  margin-top: 1.4rem;
 }
 
 .btn-group p {
@@ -140,7 +144,8 @@ p {
   color: #fff;
   cursor: pointer;
   font-size: 1.2rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1.4px;
 }
 
 .btn-primary {
@@ -306,11 +311,13 @@ p {
   justify-content: center;
   align-items: center;
 }
+
 main span.para {
   display: flex;
   text-align: center;
   width: 75%;
-  margin: 0.6rem auto;
+  margin: 1rem auto;
+  color: #828282;
 }
 
 .btn-group.connecting {

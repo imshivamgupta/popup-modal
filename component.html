@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="popup.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald|Roboto:400,500,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="app">
@@ -13,10 +17,10 @@
     <script type="text/x-template" id="notification">
       <div class="modal show-modal">
         <div class="modal-content">
-          <main v-if="step !== 3">
+          <main v-if="step == 1 || step == 2">
             <form autocomplete="on" v-if="step == 1">
               <h2 class="main-heading">
-                <span> {{brand}}</span><br />
+                <span> {{brand}}</span> <br />
                 Welcomes You
               </h2>
               <p>
@@ -59,7 +63,9 @@
           <main class="success-main" v-if="step == 3">
             <div class="heading">
               <img src="assets/tick.svg" alt="success" class="success" />
-              <h1>Inquiry Submitted</h1>
+              <h2 class="final-submit">
+                Inquiry Submitted
+              </h2>
             </div>
             <span class="para">We will get back to you at the earliest</span>
           </main>
