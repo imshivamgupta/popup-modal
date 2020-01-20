@@ -22,10 +22,11 @@
         connecting-error="Please allow for the mic’s  permission when prompted by the browser."
       ></calling-card> -->
       <permission-card
-        heading="Unable to Connect"
+        heading="slow internet"
         desc="Other user has not given permission to mic’s access"
         type="Very slow internet"
         icon
+        connected
       ></permission-card>
     </div>
     <script type="text/x-template" id="notification">
@@ -146,17 +147,31 @@
     <script type="text/x-template" id="permission-card">
       <div class="modal permission show-modal">
         <div class="modal-content">
-          <main class="">
+          <main>
             <h2 class="main-heading">
               {{heading}}
+              <span class="loading re-connecting" v-if="heading.toLowerCase() == 'slow internet'">Reconnecting Call</span>
             </h2>
-            <p>
-              <img src="assets/error.svg" alt="error" width="30">
-              <span>Very slow internet</span>
+            <p v-if="loader">
+              <img src="assets/loader.svg" alt="loader" class="loader" />
             </p>
-            <div class="btn-group">
+            <p v-if="!loader && !connected" >
+              <img src="assets/error.svg" alt="error" width="30">
+              <span>{{type}}</span>
+            </p>
+            <div class="btn-group" v-if="permission">
               <a class="btn btn-try">
                 Try Again
+              </a>
+            </div>
+            <div class="btn-group" :class="{connected: connected}">
+              <a class="btn btn-cancel">
+                <img src="assets/mic.svg" alt="cancel calling" width="30" />
+                <p>Mute</p>
+              </a>
+              <a class="btn btn-cancel">
+                <img src="assets/cancel.svg" alt="cancel calling" width="30" />
+                <p>Disconnect Call</p>
               </a>
             </div>
           </main>

@@ -302,6 +302,7 @@ p {
   font-family: "Roboto", sans-serif;
 }
 
+.modal.permission .main-heading,
 .modal.calling .main-heading {
   color: #1289e0;
 }
@@ -316,8 +317,32 @@ p {
 .modal.permission p {
   margin: 1.4rem auto;
 }
+.modal.permission .btn-group p {
+  margin: 0;
+  letter-spacing: normal;
+  font-family: "Roboto", sans-serif;
+}
 .modal.permission p img {
   margin-right: 1rem;
+}
+span.re-connecting {
+  display: block;
+  color: #828282;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.btn-group.connected {
+  flex-direction: column;
+}
+.btn-group.connected .btn-cancel {
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: center;
+}
+.btn-group.connected .btn-cancel img {
+  margin-right: 0.6rem;
 }
 .modal.calling p {
   font-size: 1rem;

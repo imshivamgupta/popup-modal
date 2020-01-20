@@ -21,7 +21,10 @@ Vue.component("permission-card", {
   props: {
     heading: String,
     type: String,
-    icon: Boolean
+    icon: Boolean,
+    loader: Boolean,
+    permission: Boolean,
+    connected: Boolean
   },
   template: "#permission-card"
 });
