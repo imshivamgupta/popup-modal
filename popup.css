@@ -37,7 +37,7 @@ body {
 }
 
 .modal-content {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -163,14 +163,18 @@ p {
 }
 
 .close-button {
-  float: right;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  cursor: pointer;
   width: 1.5rem;
-  line-height: 1.5rem;
   text-align: center;
   cursor: pointer;
-  border-radius: 0.25rem;
+  border-radius: 2rem;
   background-color: lightgray;
   font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
 }
 
 .close-button:hover {
@@ -308,6 +312,21 @@ main span.para {
   width: 75%;
   margin: 0.6rem auto;
 }
+
+.btn-group.connecting {
+  margin: 0;
+}
+.btn-group.connecting .btn-cancel {
+  flex-direction: row !important;
+}
+
+.btn-group.connecting .btn-cancel img {
+  margin-right: 0.6rem;
+}
+.btn-group.connecting .btn-cancel p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
 @-webkit-keyframes shake {
   10%,
   90% {
@@ -354,6 +373,10 @@ main span.para {
     -webkit-transform: translate3d(4px, 0, 0);
     transform: translate3d(4px, 0, 0);
   }
+}
+
+.loader {
+  width: 80px;
 }
 
 .loading:after {

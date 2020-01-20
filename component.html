@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div id="app">
+      <notification step="2" brand="Wave City"></notification>
+    </div>
+    <script type="text/x-template" id="notification">
+      <div class="modal show-modal">
+        <div class="modal-content">
+          <main>
+            <form autocomplete="on" v-if="step == 1">
+              <h2 class="main-heading">
+                <span> {{brand}}</span><br />
+                Welcomes You
+              </h2>
+              <p>
+                Our virtual tour guide would like to <br />
+                know you better.
+              </p>
+              <input
+                type="text"
+                name="name"
+                aria-placeholder="Your name"
+                placeholder="Your Name (Optional)"
+              />
+              <div class="btn-group">
+                <a class="btn btn-primary">Continue</a>
+              </div>
+            </form>
+            <!-- Form Step 2 -->
+            <form autocomplete="on" v-if="step ==2">
+              <h2 class="main-heading">
+                We will call you back :)
+              </h2>
+              <input
+                type="text"
+                name="name"
+                aria-placeholder="Your name"
+                placeholder="Your Name (Optional)"
+              />
+              <input
+                type="text"
+                name="name"
+                aria-placeholder="Your mobile"
+                placeholder="Mobile Number"
+              />
+              <div class="btn-group">
+                <a class="btn btn-primary">Submit</a>
+              </div>
+            </form>
+          </main>
+        </div>
+      </div>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
