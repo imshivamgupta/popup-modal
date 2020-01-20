@@ -8,12 +8,12 @@
   </head>
   <body>
     <div id="app">
-      <notification step="2" brand="Wave City"></notification>
+      <notification step="3" brand="Wave City"></notification>
     </div>
     <script type="text/x-template" id="notification">
       <div class="modal show-modal">
         <div class="modal-content">
-          <main>
+          <main v-if="step !== 3">
             <form autocomplete="on" v-if="step == 1">
               <h2 class="main-heading">
                 <span> {{brand}}</span><br />
@@ -54,6 +54,14 @@
                 <a class="btn btn-primary">Submit</a>
               </div>
             </form>
+          </main>
+          <!-- Final Submit -->
+          <main class="success-main" v-if="step == 3">
+            <div class="heading">
+              <img src="assets/tick.svg" alt="success" class="success" />
+              <h1>Inquiry Submitted</h1>
+            </div>
+            <span class="para">We will get back to you at the earliest</span>
           </main>
         </div>
       </div>
