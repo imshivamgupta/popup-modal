@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="300" viewBox="0 0 900 300">
+  <defs>
+    <clipPath id="clip-logo">
+      <rect width="900" height="300"/>
+    </clipPath>
+  </defs>
+  <g id="logo" clip-path="url(#clip-logo)">
+    <text id="KUBMA" transform="translate(101 228)" fill="none" stroke="#fff" stroke-width="3" font-size="200" font-family="Roboto-Regular, Roboto" opacity="0.3"><tspan x="0" y="0">KUBMA</tspan></text>
+  </g>
+</svg>
