@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="popup.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald|Roboto:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <join-tour client-name="gold's gym" loader walk-through></join-tour>
+    </div>
+    <!-- Joining Card -->
+    <script type="text/x-template" id="join-tour">
+      <div class="modal show-modal" :class="{'join-tour':!walkThrough, 'walk-through': walkThrough}">
+        <div class="modal-content">
+          <main>
+            <h2 class="main-heading loading" v-if="!walkThrough">
+              {{title}}
+            </h2>
+            <p v-if="loader">
+              <img src="assets/loader.svg" alt="loader" class="loader" />
+            </p>
+            <div class="btn-group" v-if="!loader && !walkThrough">
+              <a class="btn btn-join">
+                {{btn}}
+              </a>
+            </div>
+            <p v-if="walkThrough" :class="{'info': walkThrough}">
+              An employee from {{clientName}} is joining the web-tour to give you a detailed walk-through.
+            </p>
+          </main>
+        </div>
+      </div>
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -467,6 +467,49 @@ main span.para {
 
 /*# sourceMappingURL=calling.css.map */
 
+/* Joining Tour */
+.modal.join-tour .modal-content {
+  background-color: rgba(48, 158, 242, 40%);
+}
+.modal.join-tour .main-heading {
+  color: #fff;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.modal.join-tour .main-heading.loading::after {
+  animation: dots-white 1s steps(5, end) infinite;
+}
+.modal.join-tour .btn-join {
+  background-color: #fff;
+  font-family: inherit;
+  color: #eb5757;
+  border-radius: 5rem;
+  letter-spacing: normal;
+}
+.modal.walk-through .info {
+  color: #828282;
+  font-weight: 400;
+  font-size: 1rem;
+}
+@-webkit-keyframes dots-white {
+  0%,
+  20% {
+    color: rgba(0, 0, 0, 0);
+    text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  40% {
+    color: #fff;
+    text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  60% {
+    text-shadow: 0.25em 0 0 #fff, 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  80%,
+  100% {
+    text-shadow: 0.25em 0 0 #fff, 0.5em 0 0 #fff;
+  }
+}
+
 /* Responsive Styles */
 
 @media (max-width: 400px) {

@@ -28,6 +28,16 @@ Vue.component("permission-card", {
   },
   template: "#permission-card"
 });
+Vue.component("join-tour", {
+  props: {
+    title: String,
+    btn: String,
+    loader: Boolean,
+    walkThrough: Boolean,
+    clientName: String
+  },
+  template: "#join-tour"
+});
 new Vue({
   el: "#app"
 });
